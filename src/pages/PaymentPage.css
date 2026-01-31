@@ -1,0 +1,364 @@
+.payment-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 24px;
+}
+
+.payment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.payment-content {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.payment-section {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.payment-section h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.payment-option {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #2563eb;
+  background: #f9fafb;
+}
+
+.payment-option.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.option-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.radio-btn {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.payment-option.selected .radio-btn {
+  border-color: #2563eb;
+}
+
+.radio-inner {
+  width: 12px;
+  height: 12px;
+  background: #2563eb;
+  border-radius: 50%;
+}
+
+.option-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.option-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pay-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.pay-btn:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+.summary-section {
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.summary-card h2 {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.vehicle-info-card {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #f3f4f6;
+  margin-bottom: 24px;
+}
+
+.vehicle-info-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.vehicle-info-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #e0e7ff;
+  color: #4338ca;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.customer-info,
+.price-breakdown {
+  margin-bottom: 24px;
+}
+
+.customer-info h3,
+.price-breakdown h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.info-row,
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.info-row span:first-child,
+.breakdown-row span:first-child {
+  color: #6b7280;
+}
+
+.info-row span:last-child,
+.breakdown-row span:last-child {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.breakdown-row.total {
+  padding-top: 12px;
+  border-top: 2px solid #f3f4f6;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.breakdown-row.total span:last-child {
+  color: #2563eb;
+}
+
+@media (max-width: 1200px) {
+  .payment-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .summary-section {
+    position: static;
+  }
+}
+
+@media (max-width: 1024px) {
+  .payment-page {
+    padding: 20px;
+  }
+
+  .payment-section,
+  .summary-card {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-page {
+    padding: 16px;
+  }
+
+  .back-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .payment-content {
+    margin-top: 16px;
+    gap: 20px;
+  }
+
+  .payment-section {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .payment-section h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .payment-methods {
+    gap: 12px;
+  }
+
+  .payment-option {
+    padding: 16px;
+  }
+
+  .option-info h3 {
+    font-size: 16px;
+  }
+
+  .option-info p {
+    font-size: 13px;
+  }
+
+  .radio-btn {
+    width: 22px;
+    height: 22px;
+  }
+
+  .radio-inner {
+    width: 11px;
+    height: 11px;
+  }
+
+  .pay-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .summary-card {
+    padding: 24px;
+  }
+
+  .summary-card h2 {
+    font-size: 20px;
+  }
+
+  .vehicle-info-card {
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+
+  .vehicle-info-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .vehicle-info-card h3 {
+    font-size: 15px;
+  }
+
+  .type-badge {
+    font-size: 11px;
+  }
+
+  .customer-info h3,
+  .price-breakdown h3 {
+    font-size: 15px;
+  }
+
+  .info-row,
+  .breakdown-row {
+    font-size: 13px;
+  }
+
+  .breakdown-row.total {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-section,
+  .summary-card {
+    padding: 20px;
+  }
+
+  .payment-section h1 {
+    font-size: 22px;
+  }
+
+  .payment-option {
+    padding: 14px;
+  }
+
+  .option-info h3 {
+    font-size: 15px;
+  }
+
+  .vehicle-info-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .vehicle-info-card img {
+    width: 100%;
+    height: 140px;
+  }
+}

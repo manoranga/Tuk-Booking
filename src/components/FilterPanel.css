@@ -1,0 +1,183 @@
+.filter-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.reset-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: color 0.3s ease;
+  border-radius: 6px;
+}
+
+.reset-btn:hover {
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.reset-btn:active {
+  transform: scale(0.98);
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.filter-section:last-child {
+  margin-bottom: 0;
+}
+
+.filter-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.vehicle-type-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  padding: 8px 14px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.pill:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.pill.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+.pill:active {
+  transform: scale(0.97);
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.price-input:focus {
+  border-color: #2563eb;
+}
+
+.price-separator {
+  color: #9ca3af;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.capacity-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.capacity-select:focus {
+  border-color: #2563eb;
+}
+
+@media (max-width: 1024px) {
+  .filter-panel {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-panel {
+    padding: 16px;
+  }
+
+  .filter-header h3 {
+    font-size: 16px;
+  }
+
+  .reset-btn {
+    font-size: 13px;
+  }
+
+  .filter-label {
+    font-size: 13px;
+  }
+
+  .pill {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .price-input,
+  .capacity-select {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vehicle-type-pills {
+    gap: 6px;
+  }
+
+  .pill {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
